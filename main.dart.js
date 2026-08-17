@@ -69041,7 +69041,7 @@ H(a){var s=null,r=a.R(t.G).f,q=this.c,p=A.bLp(r,q)
 return A.l1(A.mg(s,s,s,s,s,s,s,s,A.N(""+q+" \xb7 Yakla\u015f\u0131k k\xe2r analizi",s,s,s,s,s,s,s,s)),s,A.iK(new A.aNQ(p,r)),s,s)}}
 A.aNQ.prototype={
 $2(a,b){var s=null,r=b.b<600?18:26,q=this.a,p=this.b
-return A.hw(A.b([new A.alI(q,s),B.bi,new A.aog(q,s),B.bi,new A.aid(q,s),B.ch,new A.alE(q,p,s),B.ch,new A.ah8(q,p,s),B.ch,new A.aoi(q,p,s),B.DO],t.p),B.bDO,new A.ak(r,r,r,r),s,!1)},
+return A.hw(A.b([new A.alI(q,s),B.bi,new A.aog(q,s),B.bi,new A.aid(q,s),B.ch,new A.ah8(q,p,s),B.ch,new A.aoi(q,p,s),B.ch,new A.alE(q,p,s),B.DO],t.p),B.bDO,new A.ak(r,r,r,r),s,!1)},
 $S:361}
 A.alI.prototype={
 H(a){var s=null,r=this.c,q=r.w,p=q===0?s:(q-r.x)*100/q,o=A.cG(22)
