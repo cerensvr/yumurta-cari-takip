@@ -51,8 +51,22 @@
         const names = await caches.keys();
         await Promise.all(names.map((name) => caches.delete(name)));
       }
+
+      let cacheVersion = Date.now().toString();
+      try {
+        const response = await fetch(`version.json?t=${cacheVersion}`, {
+          cache: 'no-store',
+        });
+        if (response.ok) {
+          const version = await response.json();
+          cacheVersion = version.build_number ?? cacheVersion;
+        }
+      } catch (_) {
+        // Date.now() remains a safe cache buster when version.json is unavailable.
+      }
+
       const bootstrap = document.createElement('script');
-      bootstrap.src = 'flutter_bootstrap.js?v=20260828';
+      bootstrap.src = `flutter_bootstrap.js?v=${encodeURIComponent(cacheVersion)}`;
       bootstrap.async = true;
       document.body.appendChild(bootstrap);
     })();
